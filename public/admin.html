@@ -10,6 +10,9 @@
 	<script src="/socket.io/socket.io.js"></script>
 	<script>
 		var socket=io();
+		document.getElementById('send').addEventListener("click",function(){
+			let text=document.getElementById("message").value;
+		});
 	</script>
 </body>
 </html>
