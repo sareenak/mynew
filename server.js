@@ -14,8 +14,15 @@ http.listen(3000,()=>{
 	console.log("connected to serve");
 })
 io.on("connection established",(socket)=>{
+	
 	console.log("new connection established");
+	
 	socket.on("disconnect",()=>{
 		console.log("connection closed");
-	})
+	});
+
+	socket.on("message",function (msg){
+		console.log(msg)
+		io.emit("noticeboard",msg)
+	});
 })
