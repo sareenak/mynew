@@ -17,6 +17,10 @@
 <script src="/socket.io/socket.io.js"></script>
 <script>
 	var socket=io();
+	socket.on("noticeboard",(m)=>{
+		document.getElementById('notice').innerHTML=m;
+
+	})
 </script>
 </body>
 </html>
