@@ -12,6 +12,7 @@
 		var socket=io();
 		document.getElementById('send').addEventListener("click",function(){
 			let text=document.getElementById("message").value;
+			socket.emit("message",text)
 		});
 	</script>
 </body>
