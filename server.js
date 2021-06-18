@@ -15,5 +15,7 @@ http.listen(3000,()=>{
 })
 io.on("connection established",(socket)=>{
 	console.log("new connection established");
-	
+	socket.on("disconnect",()=>{
+		console.log("connection closed");
+	})
 })
